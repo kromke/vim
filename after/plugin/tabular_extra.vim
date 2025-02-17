@@ -7,4 +7,3 @@
 				  \ map(a:lines, "substitute(v:val, '^ *', '', '')")
 
     nnoremap <silent> <leader>t :TableFormat<CR>:Tabularize remove_leading_spaces<CR>
-	inoremap <Bar>   <Bar><Esc> :TableFormat<CR>:Tabularize remove_leading_spaces<CR>
