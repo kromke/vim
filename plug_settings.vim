@@ -56,7 +56,9 @@ let g:vimspector_enable_mappings = 'HUMAN'
 	" nnoremap <silent> <m-c> :CheckSwitch<cr>
 
 " Ollama
-	let g:ollama_original_tab_mapping = maparg('<C-Tab>', 'i', 0, 1)
+let g:ollama_original_tab_mapping = maparg('<C-Tab>', 'i', 0, 1)
+let g:ollama_chat_timeout = 100
+let g:ollama_enabled = 0
 "
 "
 "
