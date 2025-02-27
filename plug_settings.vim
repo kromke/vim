@@ -9,8 +9,11 @@ call plug#begin()
 	Plug 'puremourning/vimspector'
 	Plug 'honza/vim-snippets'
 	Plug 'voldikss/vim-floaterm'
+	
+" langs
 	Plug 'kchmck/vim-coffee-script'
 	Plug 'slim-template/vim-slim'
+" git
 	Plug 'tpope/vim-fugitive'
 
 " NERDTree
@@ -31,7 +34,6 @@ call plug#begin()
 " md
 	Plug 'godlygeek/tabular'
 	Plug 'preservim/vim-markdown'
-	Plug 'tenxsoydev/vim-markdown-checkswitch'
 
 " uml
 	Plug 'scrooloose/vim-slumlord'
@@ -54,6 +56,7 @@ let g:vimspector_enable_mappings = 'HUMAN'
 	map <Esc>c <A-c>
 	" let g:md_checkswitch_default_mappings_off=1
 	" nnoremap <silent> <m-c> :CheckSwitch<cr>
+set foldlevel=99
 
 " Ollama
 let g:ollama_original_tab_mapping = maparg('<C-Tab>', 'i', 0, 1)
@@ -102,3 +105,9 @@ let g:floaterm_keymap_new    = '<F7>'
 let g:floaterm_keymap_prev   = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
 let g:floaterm_keymap_toggle = '<F12>'
+
+let g:bujo#window_width = 70
+nmap <C-S> <Plug>BujoAddnormal
+imap <C-S> <Plug>BujoAddinsert
+nmap <C-Q> <Plug>BujoChecknormal
+imap <C-Q> <Plug>BujoCheckinsert

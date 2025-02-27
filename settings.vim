@@ -10,7 +10,7 @@ set laststatus=2				" Показать строку состояния
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 set wildmenu					" Отображение полных параметров вкладки командной строки 
 set cursorline					" выделение строки, находящейся под курсором
-set conceallevel=2
+set conceallevel=1
 set laststatus=2
 set mouse=a						" включить мышь для прокрутки и изменения размера
 set omnifunc=syntaxcomplete#Complete
@@ -48,5 +48,7 @@ nnoremap <silent> gb :tabprevious<CR>
 noremap <leader>y "+y
 noremap <leader>p "+p
 
-nnoremap <leader>c :let @+=expand('%:p') . ':' . line('.')<CR>
+nnoremap <leader>cp :let @+=expand('%:p') . ':' . line('.')<CR>
 nnoremap <C-r> @:
+
+source ~/.vim/votl_checkbox.vim 

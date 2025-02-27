@@ -6,4 +6,4 @@
 	AddTabularPipeline! remove_leading_spaces /^ /
 				  \ map(a:lines, "substitute(v:val, '^ *', '', '')")
 
-    nnoremap <silent> <leader>t :TableFormat<CR>:Tabularize remove_leading_spaces<CR>
+	command Tf execute ':TableFormat' | :Tabularize remove_leading_spaces

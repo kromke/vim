@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/kromke/.vim/plugged/vim-bujo/plugin'
+let g:netrw_dirhist_8='/home/kromke/.vim/plugged/vim-bujo'
+let g:netrw_dirhist_7='/home/kromke/.vim/plugged'
+let g:netrw_dirhist_6='/home/kromke/.vim'
+let g:netrw_dirhist_5='/home/kromke'
+let g:netrw_dirhist_4='/home/kromke/.vim/plugged/vim-bujo/ftplugin'
+let g:netrw_dirhist_3='/home/kromke/.vim/plugged/vim-bujo'
+let g:netrw_dirhist_2='/home/kromke/.vim/plugged'
+let g:netrw_dirhist_1='/home/kromke/.vim'
+let g:netrw_dirhist_0='/home/kromke'
