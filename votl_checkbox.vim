@@ -132,11 +132,29 @@ function! SetBox(char)
    substitute/\[.\]/\="[".expand(a:char)."]"/
    if a:char == 'X'
       call SetPercent(".",100)
+	  call SetDate(".")
    elseif a:char == '_'
       call SetPercent(".",0)
+	  call DeleteDate(".")
    endif
 endfunction
 
+"}}}1
+" SetDate(line) {{{1
+" Add date in next line
+function! SetDate(line) abort
+	let mbegin=match(getline(a:line), "[X]")
+		if mbegin
+		let l:date = strftime("%Y-%m-%d")
+		call setline(a:line ,substitute(getline(a:line),"\\[X\\]","[X] *".l:date."* ",""))
+	endif
+endfunction
+
+"}}}1
+" DeleteDate(line){{{1
+function! DeleteDate(line) abort
+	call setline(a:line ,substitute(getline(a:line),'\(\[_\]\)\@<=\s\*[0-9-]\+\*\s','',''))
+endfunction
 "}}}1
 " SwitchBox() {{{1
 " Switch the state of the checkbox on the current line.

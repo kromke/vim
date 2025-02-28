@@ -9,6 +9,8 @@ call plug#begin()
 	Plug 'puremourning/vimspector'
 	Plug 'honza/vim-snippets'
 	Plug 'voldikss/vim-floaterm'
+	Plug 'godlygeek/tabular'
+	Plug 'preservim/vim-markdown'
 	
 " langs
 	Plug 'kchmck/vim-coffee-script'
@@ -30,10 +32,6 @@ call plug#begin()
 
 " todo
 	Plug 'vuciv/vim-bujo'
-
-" md
-	Plug 'godlygeek/tabular'
-	Plug 'preservim/vim-markdown'
 
 " uml
 	Plug 'scrooloose/vim-slumlord'
@@ -111,3 +109,5 @@ nmap <C-S> <Plug>BujoAddnormal
 imap <C-S> <Plug>BujoAddinsert
 nmap <C-Q> <Plug>BujoChecknormal
 imap <C-Q> <Plug>BujoCheckinsert
+
+let g:vim_markdown_folding_disabled = 1
