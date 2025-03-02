@@ -51,4 +51,4 @@ noremap <leader>p "+p
 nnoremap <leader>cp :let @+=expand('%:p') . ':' . line('.')<CR>
 nnoremap <C-r> @:
 
-source ~/.vim/votl_checkbox.vim 
+nnoremap <leader>dd  "=">DONE [".strftime("%F")."]"<CR>P

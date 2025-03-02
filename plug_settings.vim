@@ -1,41 +1,38 @@
 call plug#begin()
-	Plug 'itchyny/lightline.vim'"
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+
 	Plug 'tpope/vim-commentary'
+
 	Plug 'tpope/vim-surround'
+	
 	Plug 'pappasam/vim-filetype-formatter'					
-	Plug 'puremourning/vimspector'
-	Plug 'honza/vim-snippets'
-	Plug 'voldikss/vim-floaterm'
+
 	Plug 'godlygeek/tabular'
+	
 	Plug 'preservim/vim-markdown'
+
+	Plug 'bullets-vim/bullets.vim'
+
+	Plug 'tpope/vim-speeddating'
 	
 " langs
-	Plug 'kchmck/vim-coffee-script'
-	Plug 'slim-template/vim-slim'
-" git
-	Plug 'tpope/vim-fugitive'
+	Plug 'puremourning/vimspector'
+	Plug 'honza/vim-snippets'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" NERDTree
-	Plug 'preservim/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-	Plug 'ryanoasis/vim-devicons'
 
 " AI
 	Plug 'gergap/vim-ollama'
 
 " theme
+	Plug 'itchyny/lightline.vim'"
 	Plug 'NLKNguyen/papercolor-theme'
 	Plug 'rakr/vim-one'
 
-" todo
-	Plug 'vuciv/vim-bujo'
-
-" uml
-	Plug 'scrooloose/vim-slumlord'
-	Plug 'aklt/plantuml-syntax'
+" NERDTree
+	Plug 'preservim/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -80,34 +77,13 @@ colorscheme one
 let g:lightline = {'colorscheme': 'one'}
 let g:one_allow_italics = 1
 
-if (empty($TMUX))
-  if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
+set termguicolors
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" floatterm
-let g:floaterm_keymap_new    = '<F7>'
-let g:floaterm_keymap_prev   = '<F8>'
-let g:floaterm_keymap_next   = '<F9>'
-let g:floaterm_keymap_toggle = '<F12>'
-
-let g:bujo#window_width = 70
-nmap <C-S> <Plug>BujoAddnormal
-imap <C-S> <Plug>BujoAddinsert
-nmap <C-Q> <Plug>BujoChecknormal
-imap <C-Q> <Plug>BujoCheckinsert
-
 let g:vim_markdown_folding_disabled = 1
+
+let g:bullets_checkbox_markers = ' .:-X'
+
