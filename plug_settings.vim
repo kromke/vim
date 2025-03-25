@@ -17,9 +17,9 @@ call plug#begin()
 	Plug 'tpope/vim-speeddating'
 	
 " langs
-	Plug 'puremourning/vimspector'
-	Plug 'honza/vim-snippets'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	" Plug 'puremourning/vimspector'
+	" Plug 'honza/vim-snippets'
+	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 " AI
@@ -37,9 +37,8 @@ call plug#begin()
 call plug#end()
 
 " coc
-source ~/.vim/coc.vim
-let $NVIM_COC_LOG_LEVEL='error'
-let $NVIM_COC_LOG_FILE='~/.vim/coclog'
+" source ~/.vim/coc.vim
+" let $NVIM_COC_LOG_LEVEL='error'
 
 " vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -85,5 +84,5 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:vim_markdown_folding_disabled = 1
 
-let g:bullets_checkbox_markers = ' .:-X'
+let g:bullets_checkbox_markers = " ¼½¾X"
 

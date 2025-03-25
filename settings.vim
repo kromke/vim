@@ -1,7 +1,7 @@
 set nocompatible				" Использовать настройки Vim, а не Vi
-set softtabstop=4				" Отступ на 2 пробела при нажатии клавиши tab
-set shiftwidth=4				" Отступ на 4 пробела при автоматическом отступе
+set softtabstop=4				" Отступ на 4 пробела при нажатии клавиши tab
 set tabstop=4					" Показать существующую вкладку шириной в 4 пробела
+set sw=4
 syntax on						" Включить подсветку синтаксиса
 filetype plugin indent on       " Включить отступы для файлов
 set autoindent					" Включить автоматический отступ
